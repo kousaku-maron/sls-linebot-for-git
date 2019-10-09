@@ -11,7 +11,8 @@ var (
 	channelSecret string = os.Getenv("CHANNEL_SECRET")
 )
 
-func initBot() (*linebot.Client, error) {
+// InitBot function
+func InitBot() (*linebot.Client, error) {
 	bot, err := linebot.New(channelID, channelSecret)
 
 	if err != nil {
